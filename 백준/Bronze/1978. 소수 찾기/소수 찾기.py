@@ -10,9 +10,6 @@ for data in datas:
         continue
     cnt = 0
     for i in range(2, data):
-        if data == 1:
-            cnt += 1
-            break
         if(data % i == 0):
             cnt+=1
             break

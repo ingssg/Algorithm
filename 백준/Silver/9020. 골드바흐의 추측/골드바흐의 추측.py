@@ -19,7 +19,7 @@ for num in input:
     incresedNum = num // 2
     decresedNum = num // 2
 
-    for _ in range(num//2 + 1):
+    for _ in range(num//2 - 1):
         if (isPrime(incresedNum) and isPrime(decresedNum)):
             print(decresedNum, incresedNum)
             break

@@ -13,8 +13,8 @@ for i in range(1, n + 1):
 
     # 한수 아니면 패스
     diff = int(n[0]) - int(n[1])
-    for i in range(1, len(n) - 1):
-        if int(n[i]) - int(n[i+1]) != diff:
+    for j in range(1, len(n) - 1):
+        if int(n[j]) - int(n[j+1]) != diff:
             cnt -= 1
             break
     cnt += 1

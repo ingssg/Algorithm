@@ -10,14 +10,15 @@ def push_print(q, x):
         if q.empty():
             print(0)
             return
-        _x = q.get()
-        print(-_x)
+        print(-q.get())
     else:
         q.put(-x)
+
 
 def ans(datas):
     queue = PriorityQueue()
     for data in datas:
         push_print(queue, data)
+
 
 ans(datas)

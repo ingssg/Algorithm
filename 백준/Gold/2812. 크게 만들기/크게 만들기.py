@@ -10,9 +10,6 @@ def ans():
     stack = []
 
     for num in nums:        # 모든 입력 값에 대해
-        if not stack:       # 스택이 비어있으면 그냥 추가
-            stack.append(num)
-            continue
         while stack and stack[-1] < num and k > 0:  # 스택에 들어있는 값이 현재 넣어줄 값보다 작을 경우 pop(k번 반복)
             stack.pop()
             k -= 1

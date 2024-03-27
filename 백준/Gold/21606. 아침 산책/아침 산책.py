@@ -7,9 +7,9 @@ cnt = 0
 
 def dfs(graph, start, visited, status):
     global cnt
+    visited[start] = True
     for g in graph[start]:
         if not visited[g]:
-            visited[g] = True
             if status[g] == 1:
                 cnt += 1
             else:
@@ -30,12 +30,13 @@ def ans():
         route[e].append(s)
         if status[s] == 1 and status[e] == 1:
             ans += 2
+
     visited = [False for _ in range(n + 1)]
 
     for i in range(1, n + 1):
         global cnt
         cnt = 0
-        if status[i] == 0:  # 흰 노드부터 dfs
+        if not visited[i] and status[i] == 0:  # 흰 노드부터 dfs
             visited[i] = True
             dfs(route, i, visited, status)
             ans += cnt * (cnt - 1)

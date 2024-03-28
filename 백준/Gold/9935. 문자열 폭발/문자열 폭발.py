@@ -5,24 +5,14 @@ input = sys.stdin.readline
 
 def ans():
     a = list(input().strip())
-    b = input().strip()
+    b = list(input().strip())
     stack = []
-    result = ''
 
     for i in a:
-
-        if i not in b:
-            stack.append(i)
-        else:
-            stack.append(i)
-            result = ''.join(stack[-len(b):])
-            while True:
-                if b in result:
-                    for _ in range(len(b)):
-                        stack.pop()
-                    result = ''.join(stack[-len(b):])
-                else:
-                    break
+        stack.append(i)
+        if stack[-len(b):] == b:
+            for _ in range(len(b)):
+                stack.pop()
 
     if not stack:
         print('FRULA')

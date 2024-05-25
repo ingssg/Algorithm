@@ -10,8 +10,8 @@ def ans():
         scores = list(map(int, input().split()))
         scores.sort()
         que = deque(scores)
-        min_max_sum = 0
-        min_max_sum += (que.popleft() + que.pop())
+        que.popleft()
+        que.pop()
         if (que[-1] - que[0]) >= 4:
             print("KIN")
         else:

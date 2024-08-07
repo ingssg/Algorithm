@@ -1,14 +1,3 @@
-const func = (str) => {
-  let newS = "";
-  let numS = Number(str);
-  while(numS > 0) {
-      newS += numS%2;
-      numS = Math.floor(numS/2);
-  }
-  return newS;
-}
-
-
 function solution(s) {
   var answer = [];
   let zeroC = 0;
@@ -22,7 +11,7 @@ function solution(s) {
           }
           return true;
       }).join("");
-      s = func(s.length.toString());
+      s = s.length.toString(2);
       cnt += 1;
   }
   answer.push(cnt);
